@@ -1,84 +1,236 @@
-body {
-  background: #f4f4f4;
-  color: #555;
-  font: normal 16px verdana;
-  line-height: 1.6em;
-  margin: 0;
-}
-
-.container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-}
-
-#main-header {
-  background: coral;
-  color: white;
-}
-
-#navbar {
-  background: darkgrey;
-  color: white;
-}
-
-#navbar ul {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
   padding: 0;
-  list-style: none;
-}
-
-#navbar li {
-  display: inline;
-}
-
-#navbar a {
-  color: whitesmoke;
-  text-decoration: none;
-  font-size: 18px;
-  padding-right: 15px;
-}
-
-#showcase {
-  background: url(../images/Coral.jpg);
-  background-position: center right;
-  min-height: 300px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-#showcase h1 {
-  color: #fff;
-  font: 50px;
-  line-height: 1.6em;
-  padding-top: 30px;
-}
-
-#sidebar {
-  float: left;
-  width: 70%;
-  background: #333;
-  color: white;
-  padding: 0 30px;
+  margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-#main-footer {
-  background: #333;
+nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #cafdff;
+}
+
+header {
+  background-color: #eadcff;
+  height: calc(100vh - 70px);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+.subheader {
+  font-size: 36px;
+  margin: 16px 0 24px 0;
+}
+
+button {
+  background-color: #05c7cf;
+  border-radius: 8px;
   color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
+  border: none;
+  padding: 8px 16px;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-@media (max-width: 600px) {
-  #main{
-    width: 100%;
-    float: none;
+a {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo {
+  width:400px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  list-style-type: none;
+  padding-left: 16px;
+}
+
+.row {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home_row {
+  background-color: #eadcff;
+}
+
+/*
+about
+*/
+
+#about,
+#discord,
+#contact,
+footer {
+  padding: 48px 0;
+}
+
+#about {
+  background-color: #f8ffdc;
+}
+
+h2 {
+  font-size: 68px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section_description {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about_image {
+  width: 40%;
+}
+
+img {
+  width: 100%;
+}
+
+.about_image,
+.about_text {
+  padding: 0 24px;
+}
+
+.about_text {
+  width: 60%;
+}
+
+.about_paragraph {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/*
+DISCORD
+*/
+
+#discord {
+  background-color: #cefeff;
+}
+
+/*
+CONTACT
+*/
+
+#contact {
+  background-color: #dce9ff;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  max-width: 90%;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  margin-bottom: 24px;
+  font-size: 28px;
+  padding: 6px 12px;
+}
+
+/*
+FOOTER
+*/
+
+footer {
+  background-color: #aaf5ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer_logo {
+  max-width: 40%;
+  margin-bottom: 16px;
+}
+
+.footer_links {
+  margin-bottom: 32px;
+}
+
+.footer_link {
+  padding: 0 16px;
+}
+
+/*SMALL PHONES, TABLETS, LARGE SMARTPHONES*/
+
+@media (max-width: 728px) {
+  header {
+    flex-direction: column;
   }
 
-  #sidebar{
+  .logo{
+    max-width: 80%;
+  }
+
+  .home-description {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .subheader {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  ul {
+    display: none;
+  }
+
+  .section_description {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about_text{
     width: 100%;
-    float: none;
+  }
+
+  .about_image{
+    width: 100%;
+  }
+
+  #discord{
+    flex-direction: column-reverse;
+
   }
 
 }
